@@ -13,6 +13,7 @@
     <!-- Google Fonts -->
     <!-- Link Files -->
     <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="src/all.min.css">
     <!-- Link Files -->
 </head>
 
@@ -21,22 +22,62 @@
     <div class="relative w-[350px] h-[700px] bg-[#f0f0f0] rounded-[50px] border-[9px] border-black">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[170px] h-[30px] bg-black rounded-b-[20px]">
         </div>
-        <div class="upperArea mx-5 my-10 flex items-center justify-between">
+        <!-- UpperArea -->
+
+        <div class="upperArea text-[14px] mx-5 mt-10 mb-5 flex items-center justify-between">
             <div class="flex">
                 <img class=" h-[50px]" src="assets/02.png" alt="Logo">
                 <div class="">
-                    <p>$4500</p>
+                    <h3 id="availableBalance" class="text-[18px] font-bold">$4500</h3>
                     <p>Available balance</p>
                 </div>
             </div>
+            <div class="flex border-gray-500 border-1 px-[12px] py-[5px] items-center">
+                <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                <h3>Log Out</h3>
+            </div>
         </div>
+        <hr class="border-gray-300 border-1 ">
+        <!-- UpperArea -->
+        <!-- Sections -->
+        <div class="p-[20px] font-outfit">
+            <h3 class="font-bold">🔥 Welcome to Payooo!</h3>
+            <p class="text-[14px] text-gray-600 ">Enjoy easy and convenient financial services with us. Cashout charge
+                is
+                low and </p>
+        </div>
+        <div class="w-[33%]">
+
+        </div>
+
+
+        <!-- Sections -->
+        <!-- Information -->
+
+        <div class="screenContents text-outfit bg-white rounded-2xl p-[25px] absolute bottom-30 left-1/2 -translate-x-1/2">
+            <h5 id="addAmountText" class="mb-2 text-[16px] font-outfit">Enter Amount</h5>
+            <input id="amountInput"
+                class="mb-2 px-5 py-3 font-outfit rounded-full bg-gray-100 border-1 border-gray-200 text-gray-600 placeholder-gray-400"
+                type="tel" placeholder="Amount to Add" maxlength="11">
+
+                
+
+            <h5 id="pinText" class="mb-2 text-[16px] font-outfit">4 Digit Pin</h5>
+            <input id="pinInput"
+                class="mb-2 px-5 py-3 font-outfit rounded-full bg-gray-100 border-1 border-gray-200 text-gray-600 placeholder-gray-400"
+                type="password" placeholder="Enter Your Pin" maxlength="4">
+
+            <button id="moneyBtn" class="btn mt-2 btn-wide text-white bg-blue-500 rounded-[20px]">Add Money</button>
+        </div>
+        <!-- Information -->
+
 
     </div>
 
 
 
     <!-- Script Files -->
-    <script src="js/script.js"></script>
+    <script src="js/home.js"></script>
     <!-- Script Files -->
 </body>
 
