@@ -12,10 +12,14 @@ moneyBtn.addEventListener("click", function () {
     alert("Amount added successfully!");
     let currentBalance = parseFloat(availableBalance.innerHTML);
     let newBalance = parseFloat(addAmountInput.value);
-    availableBalance.innerText = (currentBalance + newBalance);
-
+    availableBalance.innerText = currentBalance + newBalance;
   } else {
     alert("Wrong credentials! Please try again.");
   }
 });
+
+
+
+
+
 // Home Screen
