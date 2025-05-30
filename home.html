@@ -17,7 +17,7 @@
     <!-- Link Files -->
 </head>
 
-<body class="flex items-center justify-center bg-[#f0f0f0]">
+<body class="flex items-center justify-center bg-[#f0f0f0] font-Outfit">
 
     <div class="relative w-[350px] h-[700px] bg-[#f0f0f0] rounded-[50px] border-[9px] border-black">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[170px] h-[30px] bg-black rounded-b-[20px]">
@@ -34,32 +34,72 @@
             </div>
             <div class="flex border-gray-500 border-1 px-[12px] py-[5px] items-center">
                 <i class="fa-solid fa-right-from-bracket mr-2"></i>
-                <h3>Log Out</h3>
+                <a href="./index.html">Log Out</a>
             </div>
         </div>
         <hr class="border-gray-300 border-1 ">
         <!-- UpperArea -->
         <!-- Sections -->
-        <div class="p-[20px] font-outfit">
+        <div class="p-[20px]">
             <h3 class="font-bold">🔥 Welcome to Payooo!</h3>
             <p class="text-[14px] text-gray-600 ">Enjoy easy and convenient financial services with us. Cashout charge
                 is
                 low and </p>
         </div>
-        <div class="w-[33%]">
+        <div class="flex px-4 justify-between items-center font-thin flex-wrap">
+
+            <div class="w-[33%] pb-3">
+                <button id="addMoneyBtn"
+                    class="btn w-[90px] h-[50px] border-1 border-gray-200 bg-white rounded-2xl flex flex-col items-center justify-center hover:bg-gray-200">
+                    <img class="w-[18px]" src="assets/svg/wallet 1.svg" alt="">
+                    <h4 class="text-[10px] ">Add Money</h4>
+                </button>
+            </div>
+
+            <div class="w-[33%] pb-3">
+                <button id="cashOutBtn"
+                    class="btn w-[90px] h-[50px] border-1 border-gray-200 bg-white rounded-2xl flex flex-col items-center justify-center hover:bg-gray-200">
+                    <img class="w-[18px]" src="assets/svg/send 1.svg" alt="">
+                    <h4 class="text-[10px]  ">Cashout</h4>
+                </button>
+            </div>
+
+            <div class="w-[33%] pb-3">
+                <button id=""
+                    class="btn w-[90px] h-[50px] border-1 border-gray-200 bg-white rounded-2xl flex flex-col items-center justify-center hover:bg-gray-200">
+                    <img class="w-[16px]" src="assets/svg/money 1.svg" alt="">
+                    <h4 class="text-[9px]  ">Transfer Money</h4>
+                </button>
+            </div>
+
+            <div class="w-[33%] pb-3">
+                <button id=""
+                    class="btn w-[90px] h-[50px] border-1 border-gray-200 bg-white rounded-2xl flex flex-col items-center justify-center hover:bg-gray-200">
+                    <img class="w-[18px]" src="assets/svg/financial 1.svg" alt="">
+                    <h4 class="text-[10px]  ">Get Bonus</h4>
+                </button>
+            </div>
+
+            <div class="w-[33%] pb-3">
+                <button id=""
+                    class="btn w-[90px] h-[50px] border-1 border-gray-200 bg-white rounded-2xl flex flex-col items-center justify-center hover:bg-gray-200">
+                    <img class="w-[18px]" src="assets/svg/purse 1.svg" alt="">
+                    <h4 class="text-[10px] ">Pay Bill</h4>
+                </button>
+            </div>
+
+            <div class="w-[33%] pb-3">
+                <button id=""
+                    class="btn w-[90px] h-[50px] border-1 border-gray-200 bg-white rounded-2xl flex flex-col items-center justify-center hover:bg-gray-200">
+                    <img class="w-[18px]" src="assets/svg/transaction 1.svg" alt="">
+                    <h4 class="text-[10px]">Transaction</h4>
+                </button>
+            </div>
+
         </div>
         <!-- Sections -->
-        <!-- Information -->
-        <div
-            class="screenContents text-outfit bg-white rounded-2xl p-[25px] absolute bottom-10 left-1/2 -translate-x-1/2">
-            <h5 id="amountText" class="mb-2 text-[16px] font-outfit">Enter Amount</h5>
-            <input id="addAmountInput"
-                class="mb-2 px-5 py-3 font-outfit rounded-full bg-gray-100 border-1 border-gray-200 text-gray-600 placeholder-gray-400"
-                type="tel" placeholder="Amount to Add" maxlength="11">
-            <h5 id="amountText" class="mb-2 text-[16px] font-outfit">Enter Amount</h5>
-            <input id="addAmountInput"
-                class="mb-2 px-5 py-3 font-outfit rounded-full bg-gray-100 border-1 border-gray-200 text-gray-600 placeholder-gray-400"
-                type="tel" placeholder="Amount to Add" maxlength="11">
+        <!-- Add Money -->
+        <div id="addMoney" class="text-outfit bg-white rounded-2xl p-[25px] m-[15px] ">
             <h5 id="amountText" class="mb-2 text-[16px] font-outfit">Enter Amount</h5>
             <input id="addAmountInput"
                 class="mb-2 px-5 py-3 font-outfit rounded-full bg-gray-100 border-1 border-gray-200 text-gray-600 placeholder-gray-400"
@@ -72,7 +112,28 @@
 
             <button id="moneyBtn" class="btn mt-2 btn-wide text-white bg-blue-500 rounded-[20px]">Add Money</button>
         </div>
-        <!-- Information -->
+        <!-- Add Money -->
+        <!-- CashOut -->
+        <div id="cashOutMoney hidden">
+            <h1>Cashout :</h1>
+            <div class="text-outfit bg-white rounded-2xl p-[25px]  m-[15px]">
+                <h5 id="amountText" class="mb-2 text-[16px] font-outfit">Enter Amount</h5>
+                <input id="cashOutInput"
+                    class="mb-2 px-5 py-3 font-outfit rounded-full bg-gray-100 border-1 border-gray-200 text-gray-600 placeholder-gray-400"
+                    type="tel" placeholder="Amount to Add" maxlength="11">
+
+                <h5 id="pinText" class="mb-2 text-[16px] font-outfit">4 Digit Pin</h5>
+                <input id="pinInput"
+                    class="mb-2 px-5 py-3 font-outfit rounded-full bg-gray-100 border-1 border-gray-200 text-gray-600 placeholder-gray-400"
+                    type="password" placeholder="Enter Your Pin" maxlength="4">
+
+                <button id="moneyBtn" class="btn mt-2 btn-wide text-white bg-blue-500 rounded-[20px]">Add Money</button>
+            </div>
+        </div>
+
+        <!-- CashOut -->
+
+
     </div>
 
     <!-- Script Files -->
