@@ -8,7 +8,6 @@ let availableBalance = document.getElementById("availableBalance");
 let hidebutton = document.getElementById("hidebutton");
 let cardMoney = document.getElementById("cardMoney");
 // =============================================================
-let cashOutInput = document.getElementById("cashOutInput");
 
 // Add Money
 moneyBtn.addEventListener("click", function () {
@@ -30,6 +29,8 @@ let addMoneyBtn = document.getElementById("addMoneyBtn");
 let addMoney = document.getElementById("addMoney");
 let cashOutBtn = document.getElementById("cashOutBtn");
 let cashOutMoney = document.getElementById("cashOutMoney");
+let cashOutInput = document.getElementById("cashOutInput");
+let withdrawBtn = document.getElementById("withdrawBtn");
 
 cashOutBtn.addEventListener("click", () => {
   addMoney.classList.add("hidden");
@@ -39,6 +40,24 @@ addMoneyBtn.addEventListener("click", () => {
   cashOutMoney.classList.add("hidden");
   addMoney.classList.remove("hidden");
 });
+
+withdrawBtn.addEventListener("click", () => {
+  let currentbalance = parseFloat(availableBalance.innerHTML);
+  let cashOutAmount = parseFloat(cashOutInput.value);
+  let finalBalance = currentbalance - cashOutAmount;
+  if (cashOutInput.value == "" || pinInput == "") {
+    alert("Credentials cannot be empty.");
+  } else if (pinInput.value != "1234") {
+    alert("PIN VUL");
+  } else if (cashOutAmount <= 0) {
+    alert("Please enter a valid amount to cash out.");
+  } else if (cashOutAmount > availableBalance.innerHTML) {
+    alert("Insufficient balance for this cash out.");
+  } else {
+    alert("Cash out successful!");
+  }
+});
+
 // CashOut
 
 // Home Screen
