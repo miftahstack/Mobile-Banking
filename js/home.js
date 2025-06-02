@@ -47,13 +47,12 @@ withdrawBtn.addEventListener("click", () => {
   let finalBalance = currentbalance - cashOutAmount;
   if (cashOutInput.value == "" || pinInput == "") {
     alert("Credentials cannot be empty.");
-  } else if (pinInput.value != "1234") {
-    alert("PIN VUL");
-  } else if (cashOutAmount <= 0) {
-    alert("Please enter a valid amount to cash out.");
   } else if (cashOutAmount > availableBalance.innerHTML) {
     alert("Insufficient balance for this cash out.");
+  } else if (cashOutAmount <= 0) {
+    alert("Please enter a valid amount to cash out.");
   } else {
+    availableBalance.innerHTML = finalBalance;
     alert("Cash out successful!");
   }
 });
