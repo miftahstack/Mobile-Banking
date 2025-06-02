@@ -1,4 +1,3 @@
-// Home Screen
 let pinInput = document.getElementById("pinInput");
 let pinText = document.getElementById("pinText");
 let moneyBtn = document.getElementById("moneyBtn");
@@ -51,6 +50,8 @@ withdrawBtn.addEventListener("click", () => {
     alert("Insufficient balance for this cash out.");
   } else if (cashOutAmount <= 0) {
     alert("Please enter a valid amount to cash out.");
+  } else if (pinInput.value !== "1234") {
+    alert("Worng Pin! Please try again.");
   } else {
     availableBalance.innerHTML = finalBalance;
     alert("Cash out successful!");
@@ -58,5 +59,3 @@ withdrawBtn.addEventListener("click", () => {
 });
 
 // CashOut
-
-// Home Screen
