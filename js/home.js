@@ -2,13 +2,13 @@ let pinInput = document.getElementById("pinInput");
 let pinText = document.getElementById("pinText");
 let moneyBtn = document.getElementById("moneyBtn");
 
+// Add Money
 let addAmountInput = document.getElementById("addAmountInput");
 let availableBalance = document.getElementById("availableBalance");
 let hidebutton = document.getElementById("hidebutton");
 let cardMoney = document.getElementById("cardMoney");
 // =============================================================
 
-// Add Money
 moneyBtn.addEventListener("click", function () {
   if (addAmountInput.value == "" || pinInput.value == "") {
     alert("Credentials cannot be empty.");
